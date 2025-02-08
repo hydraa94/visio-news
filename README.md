@@ -1,40 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Visio News 📰  
 
-## Getting Started
+Visio News (Visionary News) is a web-based news platform developed by **Visionary Team** as a final project for an extracurricular assignment. This website displays the latest news from various sources using the [Berita Indo API](https://berita-indo-api-next.vercel.app/).  
 
-First, run the development server:
+## 🚀 Technologies Used  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **React** - For building an interactive user interface  
+- **Next.js** - For performance optimization and server-side rendering  
+- **TailwindCSS** - For fast and responsive styling  
+- **Shadcn/ui** - For modern and easy-to-use UI components  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎯 Key Features  
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+✅ Displays the latest news from various categories  
+✅ Modern and responsive UI/UX  
+✅ Fast and smooth navigation with Next.js  
+✅ Dark mode for a comfortable reading experience  
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## 🛠️ How to Run  
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+1. Clone this repository:  
+   ```bash
+   git clone https://github.com/hydraa94/visio-news.git
+   ```
+2. Navigate to the project directory:  
+   ```bash
+   cd visio-news
+   ```
+3. Install dependencies:  
+   ```bash
+   npm install
+   ```
+4. Start the development server:  
+   ```bash
+   npm run dev
+   ```
+5. Open in your browser: **http://localhost:3000**  
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 👥 Development Team (Visionary Team)  
 
-## Learn More
+- **Yedia** (Project Manager) - [GitHub](https://github.com/Yediakeytry03)  
+- **Tiara** (UI/UX)  
+- **Yumna** (Front End) - [GitHub](https://github.com/salzsaa)  
+- **Nailul** (Back End) - [GitHub](https://github.com/hydraa94)  
 
-To learn more about Next.js, take a look at the following resources:
+## 📌 Project Status  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+🔨 **In Development** - The first version is still under improvement and feature additions.  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📜 License  
 
-## Deploy on Vercel
+No license has been applied yet. If you wish to use this project, please discuss it with the development team first.  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+---  
+🔥 **Visio News - Your Gateway to the Latest News!** 🔥  
