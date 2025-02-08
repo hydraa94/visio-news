@@ -3,6 +3,7 @@ import axios from "axios";
 // Daftar URL API untuk berita ekonomi
 const baseUrlEkonomi = [
   "https://berita-indo-api-next.vercel.app/api/cnn-news/ekonomi",
+  "https://berita-indo-api-next.vercel.app/api/cnbc-news/market",
   "https://berita-indo-api-next.vercel.app/api/republika-news/ekonomi",
 ];
 
