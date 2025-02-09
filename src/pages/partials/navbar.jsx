@@ -111,7 +111,7 @@ export default function Navbar() {
       </div>
 
       {/* Search Bar */}
-      <div className="flex items-center rounded-xl border-[2px] border-black shadow-md bg-white mr-4 w-[250px]">
+      <div className="flex items-center rounded-xl border-[2px] border-black shadow-md bg-white mr-4 w-[155px] md:w-[250px]">
         <Form onSubmit={handleSearch} className="flex items-center">
           <button type="submit" className="m-2 text-black focus:outline-none">
             <Search className="w-6 h-6" strokeWidth={1} />
