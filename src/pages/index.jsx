@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import NewsCard from "../components/cards/NewsCard";
+import NewsCard from "@/components/cards/NewsCard";
 import { useRouter } from "next/router";
+import { usePagination } from "@/hooks/usePagination"; // Import the custom hook
+import Pagination from "@/components/common/pagination"; // Import the Pagination component
 
 export default function Home() {
   const [news, setNews] = useState([]);
@@ -10,6 +12,15 @@ export default function Home() {
   const [error, setError] = useState(null);
   const router = useRouter();
   const { q: query } = router.query;
+
+  // Use the custom pagination hook
+  const {
+    currentItems,
+    totalPages,
+    currentPage,
+    paginate,
+    getPaginationGroup,
+  } = usePagination(filteredNews, 10); // 10 items per page
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -20,18 +31,15 @@ export default function Home() {
             axios.get("/api/internasional"),
             axios.get("/api/ekonomi"),
           ]);
-
         const nasionalData = nasionalResponse.data.data;
         const internasionalData = internasionalResponse.data.data;
         const ekonomiData = ekonomiResponse.data.data;
-
         const combinedNews = [];
         const maxLength = Math.max(
-          nasionalData.length / 10,
-          internasionalData.length / 10,
-          ekonomiData.length / 10
+          nasionalData.length,
+          internasionalData.length,
+          ekonomiData.length
         );
-
         for (let i = 0; i < maxLength; i++) {
           if (i < nasionalData.length) {
             combinedNews.push({ ...nasionalData[i], category: "Nasional" });
@@ -49,7 +57,6 @@ export default function Home() {
             });
           }
         }
-
         setNews(combinedNews);
         setLoading(false);
       } catch (err) {
@@ -57,16 +64,14 @@ export default function Home() {
         setLoading(false);
       }
     };
-
     fetchNews();
   }, []);
 
   useEffect(() => {
-    if (!query) {
-      setFilteredNews(news); // Reset to original data if no query
+    if (!query || query.trim() === "") {
+      setFilteredNews(news);
       return;
     }
-
     const filtered = news.filter((article) =>
       article.title.toLowerCase().includes(query.toLowerCase())
     );
@@ -81,7 +86,7 @@ export default function Home() {
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6 text-center">Berita Terbaru</h1>
       <div className="grid gap-1">
-        {filteredNews.map((article, index) => (
+        {currentItems.map((article, index) => (
           <NewsCard
             key={index}
             link={article.link}
@@ -92,6 +97,14 @@ export default function Home() {
           />
         ))}
       </div>
+
+      {/* Pagination Component */}
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        paginate={paginate}
+        getPaginationGroup={getPaginationGroup}
+      />
     </div>
   );
 }

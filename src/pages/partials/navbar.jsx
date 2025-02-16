@@ -119,7 +119,18 @@ export default function Navbar() {
           <Input
             type="text"
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
+            onChange={(e) => {
+              const newQuery = e.target.value.trim();
+              if (newQuery === "") {
+                // Clear the query parameter if the input is empty
+                router.push("/", undefined, { shallow: true });
+                setSearchQuery(e.target.value);
+              } else {
+                // Update the query parameter with the new search term
+                router.push(`/?q=${newQuery}`, undefined, { shallow: true });
+                setSearchQuery(e.target.value);
+              }
+            }}
             placeholder="Search..."
             className="p-2 border-none bg-transparent focus-visible:outline-none focus-visible:ring-0 placeholder:text-gray-400 text-sm sm:text-base"
           />
