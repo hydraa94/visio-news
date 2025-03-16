@@ -4,6 +4,7 @@ import dummyImg from "../../public/images/people-dummy.jpeg";
 import nailulImg from "../../public/images/nailul-pfp.jpg";
 import yediaImg from "../../public/images/yedia-pfp.jpg";
 import yumnaImg from "../../public/images/yumna-pfp.jpg";
+import tiaraImg from "../../public/images/tiara-pfp.jpg";
 
 const teamMembers = [
   {
@@ -17,8 +18,8 @@ const teamMembers = [
     name: "TIARA EVANIA MAULIDIA PUTRI",
     role: "UI/UX Designer",
     class: "10 DKV 2",
-    image: dummyImg,
-    instagram: "",
+    image: tiaraImg,
+    instagram: "tiaravnia",
   },
   {
     name: "YUMNA SALSABIL PUTRI TSABITAH",
