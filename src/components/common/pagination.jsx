@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 
 export default function Pagination({
   currentPage,
@@ -7,7 +7,7 @@ export default function Pagination({
   getPaginationGroup,
 }) {
   return (
-    <div className="flex justify-center mt-8 space-x-2">
+    <div className="flex min-w-screen justify-center mt-8 space-x-2">
       {/* Previous Button */}
       <button
         onClick={() => paginate(currentPage - 1)}

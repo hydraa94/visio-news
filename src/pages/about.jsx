@@ -1,33 +1,37 @@
 import Image from "next/image";
 import { Card, CardTitle } from "@/components/ui/card";
 import dummyImg from "../../public/images/people-dummy.jpeg";
+import nailulImg from "../../public/images/nailul-pfp.jpg";
+import yediaImg from "../../public/images/yedia-pfp.jpg";
+import yumnaImg from "../../public/images/yumna-pfp.jpg";
 
 const teamMembers = [
   {
     name: "YEDIA KUSUMA PUTRA",
     role: "Project Manager",
     class: "11 RPL 2",
-    image: dummyImg,
-    instagram: "",
+    image: yediaImg,
+    instagram: "yediakusuma",
   },
   {
     name: "TIARA EVANIA MAULIDIA PUTRI",
     role: "UI/UX Designer",
     class: "10 DKV 2",
     image: dummyImg,
+    instagram: "",
   },
   {
     name: "YUMNA SALSABIL PUTRI TSABITAH",
     role: "Front-End Engineer",
     class: "10 DKV 2",
-    image: dummyImg,
+    image: yumnaImg,
     instagram: "myzslife_",
   },
   {
     name: "MUHAMMAD NAILUL AUTOR",
     role: "Back-End Engineer",
     class: "10 TKJ 2",
-    image: dummyImg,
+    image: nailulImg,
     instagram: "xy.hydraa",
   },
 ];
