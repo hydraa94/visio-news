@@ -43,11 +43,11 @@ export default function About() {
       {/* Brief Description */}
       <p className="mt-4 text-gray-600 max-w-6xl mx-auto">
         VISIONARY NEWS atau dapat disingkat menjadi VISIO NEWS merupakan situs
-        daring yang menyajikan berita terkait politik baik di tigkat Nasional
-        hingga Internasional. VISIO NEWS dibuat oleh siswa-siswi "VISIO-TEAM"
-        yang tergabung dalam ekstrakulikuler IT Club SMKN 1 SRABAYA. Situs ini
-        dibuat dalam rangka penyelesaian tugas proyek akhir. VISIO TEAM terdiri
-        atas 4 (empat) peserta didik yang memiliki tugasnya sebagai berikut:
+        daring yang menyajikan berita terkini baik di tingkat Nasional hingga
+        Internasional. VISIO NEWS dibuat oleh siswa-siswi "VISIO-TEAM" yang
+        tergabung dalam ekstrakulikuler IT Club SMKN 1 SRABAYA. Situs ini dibuat
+        dalam rangka penyelesaian tugas proyek akhir. VISIO TEAM terdiri atas 4
+        (empat) peserta didik yang memiliki tugasnya sebagai berikut:
       </p>
 
       {/* Team Members Grid */}
